@@ -5,9 +5,12 @@ RUN apt update && \
     libboost-program-options-dev libboost-locale-dev libssl-dev libgmp-dev && \
     git clone https://github.com/EOSChronicleProject/eos-chronicle.git && \
     cd eos-chronicle && \
-    git checkout v1.1-rc3 && \
+    git checkout  origin/nodeos0108 && \
     git submodule update --init --recursive && \
     mkdir build && \
     cd build && \
-    cmake .. && make -j 10
-CMD ["/bin/bash"]
+    cmake .. && make -j 10 && \
+    mv chronicle-receiver /opt/ && \
+    rm -rf ~/eos-chronicle
+
+CMD ["/bin/bash","/opt/chronicle-receiver","--data-dir=./"]
