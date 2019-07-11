@@ -13,4 +13,4 @@ RUN apt update && \
     mv chronicle-receiver /opt/ && \
     rm -rf ~/eos-chronicle
 
-CMD ["/bin/bash","/opt/chronicle-receiver","--data-dir=./"]
+CMD ["/bin/bash"]
