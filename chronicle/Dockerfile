@@ -5,7 +5,7 @@ RUN apt update && \
     libboost-program-options-dev libboost-locale-dev libssl-dev libgmp-dev && \
     git clone https://github.com/EOSChronicleProject/eos-chronicle.git && \
     cd eos-chronicle && \
-    git checkout  origin/nodeos0108 && \
+#    git checkout  origin/nodeos0108 && \
     git submodule update --init --recursive && \
     mkdir build && \
     cd build && \

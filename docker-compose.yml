@@ -1,0 +1,7 @@
+version: '3'
+services:
+   chronicle:
+       build: ./chronicle
+       volumes:
+         - "./chronicle/data"
+
