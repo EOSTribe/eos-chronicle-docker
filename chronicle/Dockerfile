@@ -11,6 +11,8 @@ RUN apt update && \
     cd build && \
     cmake .. && make -j 10 && \
     mv chronicle-receiver /opt/ && \
+    mkdir /data && \
     rm -rf ~/eos-chronicle
-
-CMD ["/bin/bash"]
+COPY entrypoint.sh /usr/local/bin/
+WORKDIR  /opt/data
+ENTRYPOINT ["entrypoint.sh"]

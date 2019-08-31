@@ -1,7 +1,15 @@
-version: '3'
+version: '3.0'
 services:
-   chronicle:
-       build: ./chronicle
-       volumes:
-         - "./chronicle/data"
-
+  chronicle:
+    build: ./chronicle
+    volumes:
+      - ./chronicle:/opt/data
+    environment:
+      - DATA_DIR=./data
+      - MODE=scan
+      - HOST=api.eostribe.io #ip address or hostname of nodeos with state-history plogin
+      - PORT=18889 #port number of state history plugin
+      - WS_HOST=10.0.10.204 # ip address or hostname json's consumer
+      - WS_PORT=8080 # port number of json's consumer
+      - SKIP_BLOCK_EVENTS=true
+      - SKIP_TABLE_DELTAS=true
