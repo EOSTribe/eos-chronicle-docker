@@ -7,9 +7,9 @@ services:
     environment:
       - DATA_DIR=./data
       - MODE=scan
-      - HOST=state.history.io #ip address or hostname of nodeos with state-history plogin
-      - PORT=18889 #port number of state history plugin
-      - WS_HOST=consumer.io # ip address or hostname json's consumer
-      - WS_PORT=8080 # port number of json's consumer
+      - HOST=HOST_NAME #ip address or hostname of nodeos with state-history plogin
+      - PORT=port_number #port number of state history plugin
+      - WS_HOST=HOST_NAME # ip address or hostname json's consumer
+      - WS_PORT=port_number # port number of json's consumer
       - SKIP_BLOCK_EVENTS=false
       - SKIP_TABLE_DELTAS=true
