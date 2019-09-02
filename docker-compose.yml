@@ -13,3 +13,5 @@ services:
       - WS_PORT=port_number # port number of json's consumer
       - SKIP_BLOCK_EVENTS=false
       - SKIP_TABLE_DELTAS=true
+      - BIN_HEADER=false
+      - EXP_WS_PATH=/
