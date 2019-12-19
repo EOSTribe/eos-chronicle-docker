@@ -16,3 +16,5 @@ services:
       - SKIP_TRACES=false
       - BIN_HEADER=false
       - EXP_WS_PATH=/
+      - EXP_WS_MAX_QEUEU=10000
+      - IRREVERSIBLE_ONLY=false
