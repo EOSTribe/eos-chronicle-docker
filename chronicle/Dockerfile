@@ -4,7 +4,7 @@ RUN apt update && \
     libboost-filesystem-dev libboost-date-time-dev libboost-system-dev libboost-iostreams-dev \
     libboost-program-options-dev libboost-locale-dev libssl-dev libgmp-dev && \
     git clone https://github.com/EOSChronicleProject/eos-chronicle.git && \
-    cd eos-chronicle && \
+    cd eos-chronicle && git checkout nodeos-1.7 && \
     git submodule update --init --recursive && \
     mkdir build && \
     cd build && \
