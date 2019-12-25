@@ -9,7 +9,7 @@ RUN apt update && \
     mkdir build && \
     cd build && \
     cmake .. && make -j 10 && \
-    mv chronicle-receiver /opt/ && \
+    mv chronicle-receiver-1.7 /opt/chronicle-receiver && \
     mkdir /data && \
     rm -rf ~/eos-chronicle
 COPY entrypoint.sh /usr/local/bin/
