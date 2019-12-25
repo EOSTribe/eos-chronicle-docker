@@ -29,5 +29,5 @@ wait_term()
 
 # EXAMPLE USAGE
 prep_term
-/opt/chronicle-receiver  --data-dir=${DATA_DIR} --config-dir=${DATA_DIR} --mode=${MODE} --host=${HOST} --port=${PORT} --exp-ws-host=${WS_HOST} --exp-ws-port=${WS_PORT} --exp-ws-bin-header=${BIN_HEADER} --exp-ws-path=${EXP_WS_PATH} --plugin=exp_ws_plugin --irreversible-only=${IRREVERSIBLE_ONLY} f--exp-ws-max-queue =${EXP_WS_MAX_QEUEU} --skip-traces=${SKIP_TRACES} --skip-block-events=${SKIP_BLOCK_EVENTS} --skip-table-deltas=${SKIP_TABLE_DELTAS} &
+/opt/chronicle-receiver  --data-dir=${DATA_DIR} --config-dir=${DATA_DIR} --mode=${MODE} --host=${HOST} --port=${PORT} --exp-ws-host=${WS_HOST} --exp-ws-port=${WS_PORT} --exp-ws-bin-header=${BIN_HEADER} --exp-ws-path=${EXP_WS_PATH} --plugin=exp_ws_plugin --irreversible-only=${IRREVERSIBLE_ONLY} --exp-ws-max-queue=${EXP_WS_MAX_QEUEU} --skip-traces=${SKIP_TRACES} --skip-block-events=${SKIP_BLOCK_EVENTS} --skip-table-deltas=${SKIP_TABLE_DELTAS} &
 wait_term
