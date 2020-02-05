@@ -5,7 +5,7 @@ RUN apt update && \
     libboost-program-options-dev libboost-locale-dev libssl-dev libgmp-dev && \
     git clone https://github.com/EOSChronicleProject/eos-chronicle.git && \
     cd eos-chronicle && \
-    git submodule update --init --recursive && \
+    git checkout pre-1.2-backport && git submodule update --init --recursive && \
     mkdir build && \
     cd build && \
     cmake .. && make -j 10 && \
